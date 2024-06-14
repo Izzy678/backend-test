@@ -1,6 +1,6 @@
 import { inject, injectable } from "inversify";
 import { DatabaseTablesEnum } from "../lib/config/db.config";
-import { Post, PostTable } from "../model/post.model";
+import { Post } from "../model/post.model";
 import { PostRepository } from "../Repository/post.repository";
 import { TYPES } from "../lib/types/types";
 import { ElasticsearchRepository } from "../Repository/elasticsearch.repository";

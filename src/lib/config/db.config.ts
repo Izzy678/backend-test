@@ -1,6 +1,5 @@
- // this is the Database interface we defined earlier
- import { Pool } from 'pg'
- import { Kysely, PostgresDialect, sql } from 'kysely';
+import { Pool } from 'pg'
+import { Kysely, PostgresDialect, sql } from 'kysely';
 import { PostTable } from '../../model/post.model'
  
  const dialect = new PostgresDialect({

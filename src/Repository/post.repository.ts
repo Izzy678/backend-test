@@ -1,6 +1,6 @@
 import { DatabaseTablesEnum } from "../lib/config/db.config";
 import { IRepository } from "../interface/repository.interface";
-import { NewPost, Post, PostTable } from "../model/post.model";
+import { Post } from "../model/post.model";
 import { db } from "../lib/config/db.config";
 import { injectable } from "inversify";
 

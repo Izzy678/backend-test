@@ -5,9 +5,8 @@ import { PostService } from "../../service/post.service";
 import { PostRepository } from "../../Repository/post.repository";
 import { TYPES } from "../types/types";
 import { IRepository } from "../../interface/repository.interface";
-import { Post, PostTable } from "../../model/post.model";
+import { Post } from "../../model/post.model";
 import { ElasticsearchRepository } from "../../Repository/elasticsearch.repository";
-import { elasticsearchClient } from "./elasticsearch.config";
 
 const container = new Container();
 container.bind<PostController>(PostController).toSelf();
