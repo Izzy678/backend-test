@@ -26,8 +26,6 @@ export class PostController {
   async asyncCreatePost(req: Request, res: Response) {
     try {
       const data = req.body;
-      console.log("request",req);
-      console.log("body",data)
       await this.postService.create(data)
       res.status(200).send({ message: "post created  successfully" });
     } catch (error) {

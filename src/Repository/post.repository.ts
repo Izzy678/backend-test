@@ -8,21 +8,17 @@ import { injectable } from "inversify";
 export class PostRepository implements IRepository<Post> {
   constructor() {}
 
-  async saveMany(tableName: DatabaseTablesEnum, data: Post[]){
-       await db
-      .insertInto(tableName)
-      .values(data)
-      .executeTakeFirst();
+  async saveMany(tableName: DatabaseTablesEnum, data: Post[]) {
+    await db.insertInto(tableName).values(data).executeTakeFirst();
   }
 
-  async create(tableName:DatabaseTablesEnum,data:Post):Promise<Post>{
-    const post = await db.insertInto(tableName).values({
-      userId:data.userId,
-      body:data.body,
-     title:data.title
-    }).returningAll().executeTakeFirst();
-    console.log("created post",post);
+  async create(tableName: DatabaseTablesEnum, data: Post): Promise<Post> {
+    const post = await db
+      .insertInto(tableName)
+      .values({ ...data })
+      .returningAll()
+      .executeTakeFirst();
+    console.log("created post", post);
     return post;
   }
-
 }
