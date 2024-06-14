@@ -1,7 +1,7 @@
-import { DatabaseTablesEnum } from "../lib/config/db.config";
+import { DatabaseTablesEnum } from "../utils/config/db.config";
 import { IRepository } from "../interface/repository.interface";
 import { Post } from "../model/post.model";
-import { db } from "../lib/config/db.config";
+import { db } from "../utils/config/db.config";
 import { injectable } from "inversify";
 
 @injectable()

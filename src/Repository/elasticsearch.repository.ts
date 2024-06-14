@@ -1,8 +1,8 @@
 import { injectable } from "inversify";
 import { IRepository } from "../interface/repository.interface";
 import { Post } from "../model/post.model";
-import { DatabaseTablesEnum } from "../lib/config/db.config";
-import { elasticsearchClient } from "../lib/config/elasticsearch.config";
+import { DatabaseTablesEnum } from "../utils/config/db.config";
+import { elasticsearchClient } from "../utils/config/elasticsearch.config";
 
 @injectable()
 export class ElasticsearchRepository implements IRepository<Post> {

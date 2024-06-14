@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { InversifyExpressServer } from "inversify-express-utils";
-import container from "./lib/config/inversify.config";
+import container from "./utils/config/inversify.config";
 import express from "express";
 
 const server = new InversifyExpressServer(container);

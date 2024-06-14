@@ -1,4 +1,4 @@
-import { DatabaseTablesEnum } from "../lib/config/db.config";
+import { DatabaseTablesEnum } from "../utils/config/db.config";
 
 export interface IRepository<T> {
   saveMany(tableName: DatabaseTablesEnum, data: T[]):void;
